@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import axios from "axios";
-import { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-import { toast } from "react-hot-toast";
+import axios from 'axios';
+import { useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { toast } from 'react-hot-toast';
 
-import Button from "@/components/ui/Button";
-import Currency from "@/components/ui/Currency";
-import useCart from "@/hooks/useCart";
+import Button from '@/components/ui/Button';
+import Currency from '@/components/ui/Currency';
+import useCart from '@/hooks/useCart';
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -15,12 +15,12 @@ const Summary = () => {
   const removeAll = useCart((state) => state.removeAll);
 
   useEffect(() => {
-    if (searchParams.get("success")) {
-      toast.success("Pagamento completado");
+    if (searchParams.get('success')) {
+      toast.success('Pagamento completado');
       removeAll();
     }
-    if (searchParams.get("canceled")) {
-      toast.error("Ops! Algo deu errado");
+    if (searchParams.get('canceled')) {
+      toast.error('Ops! Algo deu errado');
     }
   }, [searchParams, removeAll]);
 
@@ -51,6 +51,7 @@ const Summary = () => {
       <Button
         className='w-full mt-6'
         onClick={onCheckout}
+        disabled={items.length === 0}
       >
         Finalizar Compra
       </Button>

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import usePreviewModal from "@/hooks/usePreviewModal";
-import Modal from "@/components/ui/modal";
-import Gallery from "@/components/galley";
-import Info from "@/components/ui/Info";
+import usePreviewModal from '@/hooks/usePreviewModal';
+import Modal from '@/components/ui/Modal';
+import Gallery from '@/components/galley';
+import Info from '@/components/ui/Info';
 
 const PreviewModal = () => {
   const previewModal = usePreviewModal();

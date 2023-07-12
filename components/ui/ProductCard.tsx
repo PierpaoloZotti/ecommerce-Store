@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Product } from "@/types";
-import Image from "next/image";
-import IconButton from "@/components/ui/IconButton";
-import { Expand, ShoppingCart } from "lucide-react";
-import Currency from "@/components/ui/Currency";
-import { useRouter } from "next/navigation";
-import { MouseEventHandler } from "react";
-import usePreviewModal from "@/hooks/usePreviewModal";
-import useCart from "@/hooks/useCart";
+import { Product } from '@/types';
+import Image from 'next/image';
+import IconButton from '@/components/ui/IconButton';
+import { Expand, ShoppingCart } from 'lucide-react';
+import Currency from '@/components/ui/Currency';
+import { useRouter } from 'next/navigation';
+import { MouseEventHandler } from 'react';
+import usePreviewModal from '@/hooks/usePreviewModal';
+import useCart from '@/hooks/useCart';
 
 interface ProductCardProps {
   data: Product;
@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   return (
     <div
       onClick={handleClick}
-      className='bg-white group cursor-pointer rounded-xl border p-3 space-y-4'
+      className='bg-white dark:bg-[#020817] group cursor-pointer rounded-xl border p-3 space-y-4'
     >
       {/* Images and Actions */}
       <div className='aspect-square rounded-xl bg-gray-100 relative'>
